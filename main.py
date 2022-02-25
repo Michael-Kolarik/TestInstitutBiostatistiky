@@ -4,9 +4,9 @@ import time
 start = time.time() #pro zjištění doby testu
 for index in range (1):#Pro automatické ověření ve dvou prohlížčích
     if index ==0:
-        driver = webdriver.Chrome(executable_path = "C:\selenium browser drivers\chromedriver.exe")
+        driver = webdriver.Chrome(executable_path = "chromedriver.exe")
     else:
-        driver = webdriver.Firefox(executable_path="C:\selenium browser drivers\geckodriver.exe")
+        driver = webdriver.Firefox(executable_path="geckodriver.exe")
     driver.get("https://cs.laurie-project.com/login") #načtení stránky
     confirmation = driver.find_element_by_class_name("button primary success-button mr-10")
     confirmation.click() #potvrzení vyskakovacího okna
